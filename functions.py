@@ -1,4 +1,5 @@
 from random import shuffle
+import webbrowser
 
 normalChars = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
 
@@ -13,7 +14,6 @@ def setKey():
     encryptionKeyFile.write("".join(defaultEncodedChars))
     encryptionKeyFile.close()
     
-    print("\n  Default Key succesfully set.")
 
 try:
     encodedLetterSequence = open("defaultEncodedChars.csv", "r")
@@ -38,7 +38,6 @@ def keyWrite(fileToWriteKey):
     fileToWriteKey.writelines("\n" + "".join(setEncodedChars))
     fileToWriteKey.close()
 
-# This function assures that if the key was changed after some file was encrypted the file could still be decrypted.
 
 def keyRead(fileToReadKey):
     
@@ -56,10 +55,11 @@ def keyRead(fileToReadKey):
         defaultEncodedChars = tuple(encodedLetterSequence.read())
         encodedLetterSequence.close()
         return defaultEncodedChars
-
+    
+    
 # This function takes a file/file path and encodes it.
 
-def encode(filePathToEncode):
+def encrypt(filePathToEncode):
 
     pathValidity = True
     
@@ -90,6 +90,7 @@ def encode(filePathToEncode):
             fileToEncode.close()
             keyWrite(filePathToEncode)
             print("\n  File Encoded.")
+            webbrowser.open(filePathToEncode)
             
         else:
             pass
@@ -99,7 +100,7 @@ def encode(filePathToEncode):
 
 # This function takes a file/file path and decodes it.
 
-def decode(filePathToDecode):
+def decrypt(filePathToDecode):
     
     pathValidity = True
     
@@ -139,6 +140,7 @@ def decode(filePathToDecode):
         fileToDecode.write(textToDecode)
         fileToDecode.close()
         print("\n  File Decoded.")
+        webbrowser.open(filePathToDecode)
         
     else:
         print("\n  File not found. Enter a valid path. Don't include quotes at the beginning and ending of the path.")

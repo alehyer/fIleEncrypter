@@ -1,24 +1,24 @@
 # This is where functions from the user programmed module are implemented to ensure that there is minimal hassle in the main executed code.
 
 from functions import *
+import functions
+
 
 while True:
     
-    cmd = input("\n  What do you want to do? (enter number only) \n   0: Exit \n   1: Encode \n   2: Decode \n   3: Change encryption key \n\n  ")
+    cmd = input("\n  What do you want to do? (enter number only) \n   0: Exit \n   1: Encrypt \n   2: Decrypt\n\n  ")
 
     if cmd == "0":
         break
     
     elif cmd == "1":
-        # The function that encodes files.
-        encode(input("\n  Enter file path: "))
+        # The function that encrypts files.
+        encrypt(input("\n  Enter file path: "))
+        setKey()
         
     elif cmd == "2":
-        # The function that decodes files.
-        decode(input("\n  Enter file path: "))
-        
-    elif cmd == "3":
-        # The function that changes the key.
+        # The function that decrypts files.
+        decrypt(input("\n  Enter file path: "))
         setKey()
     
     else:
