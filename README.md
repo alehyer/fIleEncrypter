@@ -1,13 +1,13 @@
 # fileEncrypter
-This is a small python program that encrypts **plain text files**. I made this as a project for the final year of **High School**. Please send PR's and suggest improvements in this program. (The camel-case in the repo name was intentional.)
+This is a small python program that encrypts **plain text files**. I made this as a project for the final year of **High School**.
 
-# **Before**
+## **Before Encryption**
 ```
 Name: alehyer
-Age: unknown
-Nationality: Ottoman
+Age: 228 moons old
+Nationality: LocalHost
 ```
-# **After**
+## **After Encryption**
 ```
 Nf#$#$#&#&@&@^%&^%c#$#$#&#&@&@^%&^%b#$#$#&#&@&@^%&^%: f#$#$#&#&@&@^%&^%z#$#$#&#&@&@^%&^%b#$#$#&#&@&@^%&^%r#$#$#&#&@&@^%&^%d#$#$#&#&@&@^%&^%b#$#$#&#&@&@^%&^%a#$#$#&#&@&@^%&^%
 Ax#$#$#&#&@&@^%&^%b#$#$#&#&@&@^%&^%: j#$#$#&#&@&@^%&^%s#$#$#&#&@&@^%&^%l#$#$#&#&@&@^%&^%s#$#$#&#&@&@^%&^%y#$#$#&#&@&@^%&^%h#$#$#&#&@&@^%&^%s#$#$#&#&@&@^%&^%
